@@ -77,7 +77,7 @@ module.exports = {
       msg += `\n✨ 𝓒𝓸𝓶𝓶𝓪𝓷𝓭𝓮𝓼 𝓽𝓸𝓽𝓪𝓵𝓮𝓼 : ${totalCommands}\n`;
       msg += `📖 Tape ( ${prefix}help nom_commande ) pour plus d'infos\n`;
       msg += `🫧 Groupe support : ${prefix}supportgc\n`;
-      msg += `\n🩵 Merci d'utiliser 𝐐𝐮𝐞𝐞𝐧 𝐍𝐚𝐲𝐢𝐫𝐚 💫, version royale !\n`;
+      msg += `\n🩵 Merci d'utiliser 𝐒𝐚𝐦𝐲 💫, version royale !\n`;
       msg += `━━━━━━━━━━━━━━━━━━━━\n`;
       msg += `👑 ${doNotDelete}`;
       await message.reply({ body: msg });
