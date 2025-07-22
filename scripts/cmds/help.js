@@ -3,7 +3,7 @@ const axios = require("axios");
 const path = require("path");
 const { getPrefix } = global.utils;
 const { commands, aliases } = global.GoatBot;
-const doNotDelete = "𝗩𝗢𝗟𝗗𝗜𝗚𝗢 𝗕𝗢𝗧\n";
+const doNotDelete = "👑 𝐐𝐮𝐞𝐞𝐧 𝐍𝐚𝐲𝐢𝐫𝐚 💫 - 𝓢𝓪𝓶𝔂𝓬𝓱𝓪𝓻𝓵𝓮𝓼\n";
 
 function formatFont(text) {
   const fontMapping = {
@@ -27,18 +27,18 @@ module.exports = {
   config: {
     name: "help",
     version: "1.20",
-    author: "Raphael Scholar × Gerald Max",
+    author: "👑 Samycharles-sama 🌸",
     countDown: 9,
     role: 0,
     shortDescription: {
-      en: "View command usage and list"
+      fr: "📚 Voir la liste et l'utilisation des commandes"
     },
     longDescription: {
-      en: "View detailed command usage and list all available commands"
+      fr: "🌟 Accède à la liste royale des commandes de 𝐐𝐮𝐞𝐞𝐧 𝐍𝐚𝐲𝐢𝐫𝐚 💫"
     },
-    category: "info",
+    category: "📖 Informations",
     guide: {
-      en: "{pn} [command_name]"
+      fr: "{pn} [nom_commande]"
     },
     priority: 1
   },
@@ -49,11 +49,11 @@ module.exports = {
 
     if (args.length === 0) {
       const categories = {};
-      let msg = ``;
+      let msg = `🌸 𝑩𝒊𝒆𝒏𝒗𝒆𝒏𝒖𝒆 𝒅𝒂𝒏𝒔 𝒍𝒂 𝑺𝒂𝒍𝒍𝒆 𝒅𝒆𝒔 𝑪𝒐𝒎𝒎𝒂𝒏𝒅𝒆𝒔 𝑹𝒐𝒚𝒂𝒍𝒆𝒔 👑\n`;
 
       for (const [name, value] of commands) {
         if (value.config.role > role) continue;
-        const category = value.config.category || "NO CATEGORY";
+        const category = value.config.category || "🔮 Aucune catégorie";
         if (!categories[category]) {
           categories[category] = { commands: [] };
         }
@@ -62,58 +62,57 @@ module.exports = {
 
       Object.keys(categories).sort().forEach(category => {
         const formattedCategory = formatFont(category.toUpperCase());
-        msg += `\n╭───────────❍\n│〘 ${formattedCategory} 〙\n`;
+        msg += `\n👑 〘 ${formattedCategory} 〙\n`;
 
         const names = categories[category].commands.sort();
         for (let i = 0; i < names.length; i++) {
           const formattedCmd = formatFonts(names[i]);
-          msg += `│☾ ${formattedCmd}\n`;
+          msg += `🌺 ➤ ${formattedCmd}\n`;
         }
 
-        msg += `╰──────────────❍\n`;
+        msg += `🌸━━━━━━━━━━━━━━━\n`;
       });
 
       const totalCommands = commands.size;
-      msg += `╭───❍【 ☘ | 𝐄𝐍𝐉𝐎𝐘 】\n`;
-      msg += `│» 𝙲𝚞𝚛𝚛𝚎𝚗𝚝𝚕𝚢 𝚝𝚑𝚒𝚜 𝚋𝚘𝚝 𝚑𝚊𝚜 \n│『 ${totalCommands} 』𝚌𝚘𝚖𝚖𝚊𝚗𝚍𝚜 𝚝𝚑𝚊𝚝 𝚌-\n│-𝚊𝚗 𝚋𝚎 𝚞𝚜𝚎𝚍\n`;
-      msg += `│» 𝚃𝚢𝚙𝚎 ( ${prefix}help 𝘤𝘮𝘥_𝘯𝘢𝘮𝘦 )\n│𝚃𝚘 𝚟𝚒𝚎𝚠 𝚍𝚎𝚝𝚊𝚒𝚕𝚜\n│𝚘𝚏 𝚑𝚘𝚠 𝚝𝚘 𝚞𝚜𝚎\n`;
-      msg += `│» 𝚃𝚢𝚙𝚎 ( ${prefix}𝚜𝚞𝚙𝚙𝚘𝚛𝚝𝚐𝚌 𝚝𝚘\n│𝚝𝚘 𝚐𝚎𝚝 𝚊𝚍𝚍𝚎𝚍 𝚝𝚘 𝚖𝚢\n│𝚍𝚎𝚟𝚜 𝙶𝚛𝚘𝚞𝚙 𝚌𝚑𝚊𝚝 )\n`;
-      msg += `╰─────────────❍\n`;
-      msg += `╭────────────❍\n`;
-      msg += `│ ${doNotDelete}`;
-      msg += `╰─────❍`;
-
+      msg += `\n✨ 𝓒𝓸𝓶𝓶𝓪𝓷𝓭𝓮𝓼 𝓽𝓸𝓽𝓪𝓵𝓮𝓼 : ${totalCommands}\n`;
+      msg += `📖 Tape ( ${prefix}help nom_commande ) pour plus d'infos\n`;
+      msg += `🫧 Groupe support : ${prefix}supportgc\n`;
+      msg += `\n🩵 Merci d'utiliser 𝐐𝐮𝐞𝐞𝐧 𝐍𝐚𝐲𝐢𝐫𝐚 💫, version royale !\n`;
+      msg += `━━━━━━━━━━━━━━━━━━━━\n`;
+      msg += `👑 ${doNotDelete}`;
       await message.reply({ body: msg });
     } else {
       const commandName = args[0].toLowerCase();
       const command = commands.get(commandName) || commands.get(aliases.get(commandName));
 
       if (!command) {
-        await message.reply(`Command "${commandName || "undefined"}" not found.`);
+        await message.reply(`❌ Commande "${commandName}" introuvable, Senpai...`);
       } else {
         const configCommand = command.config;
         const roleText = roleTextToString(configCommand.role);
-        const author = configCommand.author || "Unknown";
+        const author = configCommand.author || "❓ Inconnu";
 
-        const longDescription = configCommand.longDescription?.en || "No description";
-        const guideBody = configCommand.guide?.en || "No guide available.";
+        const longDescription = configCommand.longDescription?.fr || "🌙 Aucune description disponible";
+        const guideBody = configCommand.guide?.fr || "📖 Aucune guide pour cette commande.";
         const usage = guideBody.replace(/{p}/g, prefix).replace(/{n}/g, configCommand.name);
 
-        const response = `╭──【 NAME 】──⭓
-│【 ${configCommand.name} 】
-├─【 INFO 】
-│ Description: ${longDescription}
-│ Other names: ${configCommand.aliases ? configCommand.aliases.join(", ") : "None"}
-│ Version: ${configCommand.version || "1.0"}
-│ Role: ${roleText}
-│ Cooldown: ${configCommand.countDown || 2}s
-│ Author: ${author}
-├── Usage
-│ ${usage}
-├── Notes
-│ The content inside <XXXXX> can be changed
-│ The content inside [a|b|c] is a or b or c
-╰────────────⭓`;
+        const response = `🌸── 🌟 𝐈𝐧𝐟𝐨 𝐂𝐨𝐦𝐦𝐚𝐧𝐝𝐞 🌟 ──🌸
+📌 𝐍𝐨𝐦 : ${configCommand.name}
+💬 𝐃𝐞𝐬𝐜 : ${longDescription}
+✨ 𝐀𝐥𝐢𝐚𝐬 : ${configCommand.aliases ? configCommand.aliases.join(", ") : "Aucun"}
+⚙️ 𝐕𝐞𝐫𝐬𝐢𝐨𝐧 : ${configCommand.version || "1.0"}
+🎀 𝐑𝐨̂𝐥𝐞 : ${roleText}
+⏳ 𝐓𝐞𝐦𝐩𝐬 𝐝'𝐚𝐭𝐭𝐞𝐧𝐭𝐞 : ${configCommand.countDown || 2}s
+👑 𝐀𝐮𝐭𝐞𝐮𝐫𝐞 : ${author}
+
+📚 𝐔𝐭𝐢𝐥𝐢𝐬𝐚𝐭𝐢𝐨𝐧 :
+${usage}
+
+📝 Notes kawaii :
+- 🌼 <...> signifie "à personnaliser"
+- 🌸 [a|b|c] = choisir une option
+
+━━━━━━━━━━━━━━━💖`;
 
         await message.reply(response);
       }
@@ -123,9 +122,9 @@ module.exports = {
 
 function roleTextToString(roleText) {
   switch (roleText) {
-    case 0: return "0 (All users)";
-    case 1: return "1 (Group administrators)";
-    case 2: return "2 (Admin bot)";
-    default: return "Unknown role";
+    case 0: return "🌟 Tous les utilisateurs";
+    case 1: return "🛡️ Admins du groupe";
+    case 2: return "👑 Admins du bot";
+    default: return "❓ Rôle inconnu";
   }
-              }
+    }
