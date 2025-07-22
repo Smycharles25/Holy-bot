@@ -25,7 +25,7 @@ module.exports = {
       successGlobal: "✅ Préfixe **global** changé en : %1",
       successThisThread: "✅ Préfixe **du groupe** changé en : %1",
       myPrefix:
-        "╭─🍬🍭 𝑷𝑹𝑬𝑭𝑰𝑿 𝒅𝒆 𝐐𝐮𝐞𝐞𝐧 𝐍𝐚𝐲𝐢𝐫𝐚 💖🍡🍩\n" +
+        "╭─🍬🍭 𝑷𝑹𝑬𝑭𝑰𝑿 𝒅𝒆 𝐒𝐚𝐦𝐲 💖🍡🍩\n" +
         "│🍒 Global : 『 %1 』\n" +
         "│🍓 Groupe : 『 %2 』\n" +
         "│🍫 Créateur : https://www.facebook.com/samycharles.25\n" +
@@ -39,7 +39,7 @@ module.exports = {
       successGlobal: "✅ Global prefix changed to: %1",
       successThisThread: "✅ Group prefix changed to: %1",
       myPrefix:
-        "╭─🍬🍭 𝑷𝑹𝑬𝑭𝑰𝑿 𝒅𝒆 𝐐𝐮𝐞𝐞𝐧 𝐍𝐚𝐲𝐢𝐫𝐚 💖🍡🍩\n" +
+        "╭─🍬🍭 𝑷𝑹𝑬𝑭𝑰𝑿 𝒅𝒆 𝐒𝐚𝐦𝐲 💖🍡🍩\n" +
         "│🍒 Global : 『 %1 』\n" +
         "│🍓 Group  : 『 %2 』\n" +
         "│🍫 Creator : https://www.facebook.com/samycharles.25\n" +
